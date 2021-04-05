@@ -1,0 +1,152 @@
+%%%%%%%%%%%%%%%%%
+% This is an example CV created using altacv.cls (v1.1.5, 1 December 2018) written by
+% LianTze Lim (liantze@gmail.com), based on the
+% Cv created by BusinessInsider at http://www.businessinsider.my/a-sample-resume-for-marissa-mayer-2016-7/?r=US&IR=T
+%
+%% It may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.3 or later is part of all distributions of LaTeX
+%% version 2003/12/01 or later.
+%%%%%%%%%%%%%%%%
+
+%% If you are using \orcid or academicons
+%% icons, make sure you have the academicons
+%% option here, and compile with XeLaTeX
+%% or LuaLaTeX.
+% \documentclass[10pt,a4paper,academicons]{altacv}
+
+%% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
+% \documentclass[10pt,a4paper,normalphoto]{altacv}
+
+\documentclass[10pt,a4paper,ragged2e]{altacv}
+
+%% AltaCV uses the fontawesome and academicon fonts
+%% and packages.
+%% See texdoc.net/pkg/fontawecome and http://texdoc.net/pkg/academicons for full list of symbols. You MUST compile with XeLaTeX or LuaLaTeX if you want to use academicons.
+
+% Change the page layout if you need to
+\geometry{left=2cm,right=10cm,marginparwidth=6.8cm,marginparsep=1.2cm,top=1.25cm,bottom=1.25cm}
+
+% Change the font if you want to, depending on whether
+% you're using pdflatex or xelatex/lualatex
+\ifxetexorluatex
+  % If using xelatex or lualatex:
+  \setmainfont{Carlito}
+\else
+  % If using pdflatex:
+  \usepackage[utf8]{inputenc}
+  \usepackage[T1]{fontenc}
+  \usepackage[default]{lato}
+\fi
+
+% Change the colours if you want to
+\definecolor{VividPurple}{HTML}{000000}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{2E2E2E}
+\colorlet{heading}{VividPurple}
+\colorlet{accent}{VividPurple}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+% Change the bullets for itemize and rating marker
+% for \cvskill if you want to
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+%% sample.bib contains your publications
+\addbibresource{sample.bib}
+
+\begin{document}
+\name{Julian Lioanag}
+\tagline{Computer Science Student}
+
+%\photo{3.3cm}{profile.jpg}
+\personalinfo{%
+  % Not all of these are required!
+  % You can add your own with \printinfo{symbol}{detail}
+  \email{julianlioanag@gmail.com}
+ \mailaddress{243 W End Ave, Green Brook, NJ}
+  \github{github.com/jlioanag}
+  \linkedin{linkedin.com/in/jlioanag}
+}
+
+%% Make the header extend all the way to the right, if you want.
+\begin{fullwidth}
+\makecvheader
+\end{fullwidth}
+
+%% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
+\AtBeginEnvironment{itemize}{\small}
+
+%% Provide the file name containing the sidebar contents as an optional parameter to \cvsection.
+%% You can always just use \marginpar{...} if you do
+%% not need to align the top of the contents to any
+%% \cvsection title in the "main" bar.
+\cvsection[page1sidebar]{Experience}
+
+\cvevent{TECDP Summer Intern}{Cigna}{May 2021 -- Aug 2021}{Philadelphia, PA (Online)}
+\begin{itemize}
+\item Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mock-ups.
+\end{itemize}
+
+\divider
+
+\cvevent{Research Assistant}{RPI Undergraduate Research Program}{Jan 2020 -- Present}{Troy, NY}
+\begin{itemize}
+\item Co-authored an academic paper about improving SOTA data-to-text generation.
+\item Developed data correction post-processing scripts in Python.
+\item Performed 500+ subjective evaluations using Amazon Mechanical Turk.
+\item Currently researching storyboard skeleton natural language generation.
+\end{itemize}
+
+\divider
+
+\cvevent{Fullstack Developer}{Smartrider: Rensselaer Center for Open Source}{Jan 2020 -- Present}{Troy, NY}
+\begin{itemize}
+\item Co-founded an open source, all-in-one transportation app for RPI students on Android, iOS, and web.
+\item Released a stable prototype with Flutter framework and Firebase back-end.
+\item Created prototype UI for shuttle and bus scheduling panels using Flutter and Dart.
+\item Designed architecture for bus and rideshare models using Business-Logic Components (BLoC) pattern.
+\item Worked on bus transit functionality by creating a REST API and noSQL database.
+\item Built Firebase cloud functions for student-run ridesharing service using Hypertrack SDK.
+\end{itemize}
+
+\divider
+
+% \cvevent{Developer}{HackRPI Hackathon}{Nov 2019}{Troy, NY}
+% \begin{itemize}
+% \item Participated in a 24-hour hackathon competition to create a deepfake article detector website.
+% \item Constructed a web scraping script with BeautifulSoup for collecting text and images from various news articles.
+% \item Adapted existing Haar Cascades implementation to our software.
+% \item Implemented facial-recognition for images using OpenCV to filter through extraneous images.
+% \end{itemize}
+
+% \divider
+
+\cvevent{Programming Team Member}{FRC Team 41 Robotics}{Sep 2015 -- May 2019}{Warren, NJ}
+\begin{itemize}
+\item Worked on a 3D-printed drone using Autodesk Inventor and Raspberry Pi Zero W.
+\item Developed a touch screen GUI with Tkinter for an intuitive driver station used in competitions.
+\item Built basic HTML, JS \& CSS front-end for a team-scouting application that analyzed 200+ teams at tournaments.
+\item Taught basic C++ programming to 10+ new members.
+\end{itemize}
+
+
+\clearpage
+
+
+\nocite{*}
+
+
+% %% If the NEXT page doesn't start with a \cvsection but you'd
+% %% still like to add a sidebar, then use this command on THIS
+% %% page to add it. The optional argument lets you pull up the
+% %% sidebar a bit so that it looks aligned with the top of the
+% %% main column.
+% % \addnextpagesidebar[-1ex]{page3sidebar}
+
+
+\end{document}
